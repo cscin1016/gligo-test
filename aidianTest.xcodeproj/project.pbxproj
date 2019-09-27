@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040DA3CD23377349008BC297 /* QCNameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DA3CC23377349008BC297 /* QCNameVC.m */; };
+		040DA3D023377371008BC297 /* SelectDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DA3CF23377371008BC297 /* SelectDeviceVC.m */; };
+		040DA3D32337739A008BC297 /* ScanDeviceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 040DA3D22337739A008BC297 /* ScanDeviceVC.m */; };
+		04288DCC233AFFE700A16F7D /* HHAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DC7233AFFE700A16F7D /* HHAlertView.m */; };
+		04288DCD233AFFE700A16F7D /* UIView+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DC8233AFFE700A16F7D /* UIView+Draw.m */; };
+		04288DD7233B006D00A16F7D /* UIView+Gradien.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DCF233B006D00A16F7D /* UIView+Gradien.m */; };
+		04288DD8233B006D00A16F7D /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DD3233B006D00A16F7D /* UIButton+Gradient.m */; };
+		04288DD9233B006D00A16F7D /* UIImageView+Gradien.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DD5233B006D00A16F7D /* UIImageView+Gradien.m */; };
+		04288DDA233B006D00A16F7D /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DD6233B006D00A16F7D /* UIImage+Gradient.m */; };
+		047967C1233CFC09006D1EFF /* QueryTestRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 047967C0233CFC09006D1EFF /* QueryTestRecord.m */; };
+		047967C4233D0038006D1EFF /* RecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047967C3233D0038006D1EFF /* RecordCell.m */; };
 		04AE2D422282BEAA00B2AA37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D412282BEAA00B2AA37 /* AppDelegate.m */; };
 		04AE2D452282BEAA00B2AA37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D442282BEAA00B2AA37 /* ViewController.m */; };
 		04AE2D482282BEAA00B2AA37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AE2D462282BEAA00B2AA37 /* Main.storyboard */; };
@@ -18,9 +29,35 @@
 		04AE2D5E2282DE4B00B2AA37 /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D5C2282DE4B00B2AA37 /* PopupView.m */; };
 		04AE2D612283118300B2AA37 /* BLEDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D602283118300B2AA37 /* BLEDetailVC.m */; };
 		04AE2D642283158800B2AA37 /* BLEDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D632283158800B2AA37 /* BLEDataModel.m */; };
+		04CC6ADD233A4B6F0073E915 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC6AD9233A4B6F0073E915 /* NetWork.m */; };
+		04CC6ADE233A4B6F0073E915 /* EncryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC6ADA233A4B6F0073E915 /* EncryptUtil.m */; };
+		411C6A3FBC0999638DB426A3 /* libPods-aidianTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AECBD1F832AA423A89C6D9E3 /* libPods-aidianTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040DA3CB23377349008BC297 /* QCNameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QCNameVC.h; sourceTree = "<group>"; };
+		040DA3CC23377349008BC297 /* QCNameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QCNameVC.m; sourceTree = "<group>"; };
+		040DA3CE23377371008BC297 /* SelectDeviceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectDeviceVC.h; sourceTree = "<group>"; };
+		040DA3CF23377371008BC297 /* SelectDeviceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SelectDeviceVC.m; sourceTree = "<group>"; };
+		040DA3D12337739A008BC297 /* ScanDeviceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanDeviceVC.h; sourceTree = "<group>"; };
+		040DA3D22337739A008BC297 /* ScanDeviceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanDeviceVC.m; sourceTree = "<group>"; };
+		04288DC7233AFFE700A16F7D /* HHAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHAlertView.m; sourceTree = "<group>"; };
+		04288DC8233AFFE700A16F7D /* UIView+Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Draw.m"; sourceTree = "<group>"; };
+		04288DC9233AFFE700A16F7D /* HHAlertViewConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertViewConst.h; sourceTree = "<group>"; };
+		04288DCA233AFFE700A16F7D /* HHAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHAlertView.h; sourceTree = "<group>"; };
+		04288DCB233AFFE700A16F7D /* UIView+Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Draw.h"; sourceTree = "<group>"; };
+		04288DCF233B006D00A16F7D /* UIView+Gradien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradien.m"; sourceTree = "<group>"; };
+		04288DD0233B006D00A16F7D /* UIButton+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Gradient.h"; sourceTree = "<group>"; };
+		04288DD1233B006D00A16F7D /* UIImage+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Gradient.h"; sourceTree = "<group>"; };
+		04288DD2233B006D00A16F7D /* UIImageView+Gradien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Gradien.h"; sourceTree = "<group>"; };
+		04288DD3233B006D00A16F7D /* UIButton+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Gradient.m"; sourceTree = "<group>"; };
+		04288DD4233B006D00A16F7D /* UIView+Gradien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradien.h"; sourceTree = "<group>"; };
+		04288DD5233B006D00A16F7D /* UIImageView+Gradien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Gradien.m"; sourceTree = "<group>"; };
+		04288DD6233B006D00A16F7D /* UIImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
+		047967BF233CFC09006D1EFF /* QueryTestRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueryTestRecord.h; sourceTree = "<group>"; };
+		047967C0233CFC09006D1EFF /* QueryTestRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueryTestRecord.m; sourceTree = "<group>"; };
+		047967C2233D0038006D1EFF /* RecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordCell.h; sourceTree = "<group>"; };
+		047967C3233D0038006D1EFF /* RecordCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecordCell.m; sourceTree = "<group>"; };
 		04AE2D3D2282BEAA00B2AA37 /* aidianTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aidianTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AE2D402282BEAA00B2AA37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		04AE2D412282BEAA00B2AA37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -41,6 +78,13 @@
 		04AE2D602283118300B2AA37 /* BLEDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEDetailVC.m; sourceTree = "<group>"; };
 		04AE2D622283158800B2AA37 /* BLEDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEDataModel.h; sourceTree = "<group>"; };
 		04AE2D632283158800B2AA37 /* BLEDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEDataModel.m; sourceTree = "<group>"; };
+		04CC6AD9233A4B6F0073E915 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
+		04CC6ADA233A4B6F0073E915 /* EncryptUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptUtil.m; sourceTree = "<group>"; };
+		04CC6ADB233A4B6F0073E915 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
+		04CC6ADC233A4B6F0073E915 /* EncryptUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptUtil.h; sourceTree = "<group>"; };
+		4592AF987E51C89F6A2271FB /* Pods-aidianTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aidianTest.debug.xcconfig"; path = "Target Support Files/Pods-aidianTest/Pods-aidianTest.debug.xcconfig"; sourceTree = "<group>"; };
+		AECBD1F832AA423A89C6D9E3 /* libPods-aidianTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-aidianTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8F34BE6244408326B51D308 /* Pods-aidianTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aidianTest.release.xcconfig"; path = "Target Support Files/Pods-aidianTest/Pods-aidianTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,17 +92,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411C6A3FBC0999638DB426A3 /* libPods-aidianTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04288DC6233AFFE700A16F7D /* HHAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				04288DCA233AFFE700A16F7D /* HHAlertView.h */,
+				04288DC7233AFFE700A16F7D /* HHAlertView.m */,
+				04288DCB233AFFE700A16F7D /* UIView+Draw.h */,
+				04288DC8233AFFE700A16F7D /* UIView+Draw.m */,
+				04288DC9233AFFE700A16F7D /* HHAlertViewConst.h */,
+			);
+			path = HHAlertView;
+			sourceTree = "<group>";
+		};
+		04288DCE233B006D00A16F7D /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+				04288DD4233B006D00A16F7D /* UIView+Gradien.h */,
+				04288DCF233B006D00A16F7D /* UIView+Gradien.m */,
+				04288DD1233B006D00A16F7D /* UIImage+Gradient.h */,
+				04288DD6233B006D00A16F7D /* UIImage+Gradient.m */,
+				04288DD0233B006D00A16F7D /* UIButton+Gradient.h */,
+				04288DD3233B006D00A16F7D /* UIButton+Gradient.m */,
+				04288DD2233B006D00A16F7D /* UIImageView+Gradien.h */,
+				04288DD5233B006D00A16F7D /* UIImageView+Gradien.m */,
+			);
+			path = Gradient;
+			sourceTree = "<group>";
+		};
 		04AE2D342282BEAA00B2AA37 = {
 			isa = PBXGroup;
 			children = (
 				04AE2D3F2282BEAA00B2AA37 /* aidianTest */,
 				04AE2D3E2282BEAA00B2AA37 /* Products */,
+				F1DC435489DF1D023D96171B /* Pods */,
+				1BB98C9BB5756EB743A62225 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +151,21 @@
 				04AE2D412282BEAA00B2AA37 /* AppDelegate.m */,
 				04AE2D432282BEAA00B2AA37 /* ViewController.h */,
 				04AE2D442282BEAA00B2AA37 /* ViewController.m */,
+				04288DCE233B006D00A16F7D /* Gradient */,
+				04288DC6233AFFE700A16F7D /* HHAlertView */,
+				04CC6AD8233A4B6F0073E915 /* AFNNetWork */,
+				040DA3CB23377349008BC297 /* QCNameVC.h */,
+				040DA3CC23377349008BC297 /* QCNameVC.m */,
+				040DA3CE23377371008BC297 /* SelectDeviceVC.h */,
+				040DA3CF23377371008BC297 /* SelectDeviceVC.m */,
+				040DA3D12337739A008BC297 /* ScanDeviceVC.h */,
+				040DA3D22337739A008BC297 /* ScanDeviceVC.m */,
 				04AE2D5F2283118300B2AA37 /* BLEDetailVC.h */,
 				04AE2D602283118300B2AA37 /* BLEDetailVC.m */,
+				047967BF233CFC09006D1EFF /* QueryTestRecord.h */,
+				047967C0233CFC09006D1EFF /* QueryTestRecord.m */,
+				047967C2233D0038006D1EFF /* RecordCell.h */,
+				047967C3233D0038006D1EFF /* RecordCell.m */,
 				04AE2D572282C30000B2AA37 /* BLEManager.h */,
 				04AE2D562282C30000B2AA37 /* BLEManager.m */,
 				04AE2D622283158800B2AA37 /* BLEDataModel.h */,
@@ -96,6 +183,34 @@
 			path = aidianTest;
 			sourceTree = "<group>";
 		};
+		04CC6AD8233A4B6F0073E915 /* AFNNetWork */ = {
+			isa = PBXGroup;
+			children = (
+				04CC6ADC233A4B6F0073E915 /* EncryptUtil.h */,
+				04CC6ADA233A4B6F0073E915 /* EncryptUtil.m */,
+				04CC6ADB233A4B6F0073E915 /* NetWork.h */,
+				04CC6AD9233A4B6F0073E915 /* NetWork.m */,
+			);
+			path = AFNNetWork;
+			sourceTree = "<group>";
+		};
+		1BB98C9BB5756EB743A62225 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AECBD1F832AA423A89C6D9E3 /* libPods-aidianTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1DC435489DF1D023D96171B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4592AF987E51C89F6A2271FB /* Pods-aidianTest.debug.xcconfig */,
+				C8F34BE6244408326B51D308 /* Pods-aidianTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04AE2D532282BEAB00B2AA37 /* Build configuration list for PBXNativeTarget "aidianTest" */;
 			buildPhases = (
+				0AFDC288F593995AEF35BDED /* [CP] Check Pods Manifest.lock */,
 				04AE2D392282BEAA00B2AA37 /* Sources */,
 				04AE2D3A2282BEAA00B2AA37 /* Frameworks */,
 				04AE2D3B2282BEAA00B2AA37 /* Resources */,
@@ -161,19 +277,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AFDC288F593995AEF35BDED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aidianTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04AE2D392282BEAA00B2AA37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040DA3D023377371008BC297 /* SelectDeviceVC.m in Sources */,
 				04AE2D452282BEAA00B2AA37 /* ViewController.m in Sources */,
 				04AE2D582282C30100B2AA37 /* BLEManager.m in Sources */,
 				04AE2D612283118300B2AA37 /* BLEDetailVC.m in Sources */,
+				04288DDA233B006D00A16F7D /* UIImage+Gradient.m in Sources */,
 				04AE2D502282BEAB00B2AA37 /* main.m in Sources */,
 				04AE2D5E2282DE4B00B2AA37 /* PopupView.m in Sources */,
+				04288DD8233B006D00A16F7D /* UIButton+Gradient.m in Sources */,
+				047967C4233D0038006D1EFF /* RecordCell.m in Sources */,
 				04AE2D422282BEAA00B2AA37 /* AppDelegate.m in Sources */,
+				047967C1233CFC09006D1EFF /* QueryTestRecord.m in Sources */,
+				040DA3CD23377349008BC297 /* QCNameVC.m in Sources */,
+				04CC6ADE233A4B6F0073E915 /* EncryptUtil.m in Sources */,
+				04288DD7233B006D00A16F7D /* UIView+Gradien.m in Sources */,
+				04288DCD233AFFE700A16F7D /* UIView+Draw.m in Sources */,
+				040DA3D32337739A008BC297 /* ScanDeviceVC.m in Sources */,
 				04AE2D5B2282DDA100B2AA37 /* DeviceCell.m in Sources */,
+				04CC6ADD233A4B6F0073E915 /* NetWork.m in Sources */,
 				04AE2D642283158800B2AA37 /* BLEDataModel.m in Sources */,
+				04288DCC233AFFE700A16F7D /* HHAlertView.m in Sources */,
+				04288DD9233B006D00A16F7D /* UIImageView+Gradien.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,10 +467,11 @@
 		};
 		04AE2D542282BEAB00B2AA37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4592AF987E51C89F6A2271FB /* Pods-aidianTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9D3D3Z64T;
+				DEVELOPMENT_TEAM = WAY9V7GCTN;
 				INFOPLIST_FILE = aidianTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -331,10 +486,11 @@
 		};
 		04AE2D552282BEAB00B2AA37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8F34BE6244408326B51D308 /* Pods-aidianTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9D3D3Z64T;
+				DEVELOPMENT_TEAM = WAY9V7GCTN;
 				INFOPLIST_FILE = aidianTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

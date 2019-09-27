@@ -10,34 +10,13 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "BLEDataModel.h"
 
-/*系统定时器产生的随机数*/
-#define random_number() arc4random()
-
-#pragma pack(1)
-typedef struct
-{
-    UInt16 randonNumber;//0xFFFF
-    UInt32 resultNumber;
-}commandObject;
-#pragma pack()
-
-
 #define TRANSFER_CHARACTERISTIC_UUID_FF21    @"FF21"
 #define TRANSFER_CHARACTERISTIC_UUID_FF22    @"FF22"
-
-typedef NS_ENUM(NSInteger, VersionMode) {
-    
-    NOPASSWORDDEVICE = 0,
-    /** 没有加密码的设备 */
-    BOTHCHECKPASSWORD
-    /** 两边都做校验的设备 */
-    
-};
 
 static BLEManager *manager = nil;
 
 @implementation BLEManager {
-    VersionMode versionModeStatus;
+    
     int numberOfStep;//收到3次20字节的数据时才返回
     int stepSum;
 }
@@ -66,10 +45,10 @@ static BLEManager *manager = nil;
     for(int i = 0; i < _myTempDataDic.allValues.count; i++){
         CBPeripheral *tempPeripheral = (CBPeripheral *)(((BLEDataModel*)_myTempDataDic.allValues[i]).bleObject);
         if (tempPeripheral.state == 2){
-//            NSLog(@"发送的数据：%@",[[notification userInfo] objectForKey:@"tempData"]);
+            NSLog(@"发送的数据：%@",[[notification userInfo] objectForKey:@"tempData"]);
             [self sendDatawithperipheral:tempPeripheral characteristic:TRANSFER_CHARACTERISTIC_UUID_FF21 data:[[notification userInfo] objectForKey:@"tempData"] ];
         }else{
-//            NSLog(@"未连接");
+            NSLog(@"未连接");
         }
     }
     
@@ -101,7 +80,7 @@ static BLEManager *manager = nil;
 }
 
 - (void)reSeachAction{
-    NSLog(@"搜索");
+    NSLog(@"重新搜索");
     //    NSArray *arr = [self.cbCentralMgr retrieveConnectedPeripheralsWithServices:[NSArray new]];
     //    NSLog(@"====:%@",arr);
     if (self.cbCentralMgr.isScanning) {
@@ -142,21 +121,17 @@ static BLEManager *manager = nil;
     }
 }
 
-//1.发现设备，判断是否为优莱科产品   2.判断是否已存在相同UUID    3.判断属于哪一种类型  4.是否是已连接过的产品
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    //未发生两个商标事故之前，kCBAdvDataServiceUUIDs：AD120387
-    //2018年8月1日修改    11320065:11是厂家，32是硬件版本号，0065是软件版本号
-    //厂家11是指出给佛山吴总
-    //0065=101，是给nikki的软件版本号
-    
-    NSInteger mySegmentIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"SegmentIndex"];
-//    NSString *ADUUIDSTr = [[[advertisementData objectForKey:@"kCBAdvDataServiceUUIDs"] objectAtIndex:0] UUIDString];
-    if (!(([peripheral.name isEqualToString:@"GliGO Watch One Plus"]&&mySegmentIndex==1)
-          ||([peripheral.name isEqualToString:@"GLAGOM ONE"]&&mySegmentIndex == 0))) {
-//        NSLog(@"收到不属于本公司的蓝牙4.0设备：%@",peripheral.name);
-        return;
+    for (int i = 0; i<_supportDeviceList.count; i++) {
+        if ([_supportDeviceList[i] isEqualToString:peripheral.name]) {
+            break;
+        }
+        if (i == _supportDeviceList.count-1) {
+            return;
+        }
     }
+
     NSInteger rssiFlag = [[NSUserDefaults standardUserDefaults] integerForKey:@"RSSIStr"];
     if (rssiFlag > RSSI.integerValue || RSSI.integerValue==127) {
         if ([_myTempDataDic objectForKey:[peripheral.identifier UUIDString]]) {
@@ -245,7 +220,7 @@ static BLEManager *manager = nil;
             
             for(int m=4; m<20; m++){
                 
-               int tempNum = strtoul([[tempStr substringWithRange:NSMakeRange(m*2+1, 2)] UTF8String],0,16);
+               NSInteger tempNum = strtoul([[tempStr substringWithRange:NSMakeRange(m*2+1, 2)] UTF8String],0,16);
                 if (m%2==0) {
                     stepSum += tempNum;
                 }else{
@@ -264,7 +239,7 @@ static BLEManager *manager = nil;
     if (isOver) {
         [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshBLEDetailData" object:dataModel];
     }
-    
+
 }
 
 //返回的蓝牙特征值通知代理

@@ -14,6 +14,8 @@
 @property (strong, nonatomic) CBCentralManager *cbCentralMgr;
 @property (strong, nonatomic) NSMutableDictionary *myTempDataDic;
 
+@property (strong, nonatomic) NSMutableArray *supportDeviceList;
+
 + (BLEManager *)sharedManager;
 
 - (void)reSeachAction;
@@ -30,6 +32,5 @@
 
 - (void)setTime;
 
-void encodeCommand(UInt8 *buf);
 
 @end
