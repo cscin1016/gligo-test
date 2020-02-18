@@ -32,5 +32,9 @@
 
 - (void)setTime;
 
+//价格命令
+- (void)setPriceCommand:(char)numberA dot:(char)dot usa:(char)usa forS:(char)fors priceNumber:(double)price;
+
+- (void)setShowModelAction:(char) model;
 
 @end

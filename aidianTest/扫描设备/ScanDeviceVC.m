@@ -11,6 +11,7 @@
 #import "DeviceCell.h"
 #import "PopupView.h"
 #import "BLEDataModel.h"
+#import "EPDPOPControlVC.h"
 
 
 static NSString *CellIdentifier = @"deviceCell";
@@ -43,6 +44,9 @@ static NSString *CellIdentifier = @"deviceCell";
     _mySlider.value = rssiFlag;
     _rssiLabel.text = [NSString stringWithFormat:@"信号：%d",(int)rssiFlag];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(RefreshDataAction:) name:@"RefreshBLEData" object:nil];
+    
+    UIViewController *_EPDPOPControlVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]  instantiateViewControllerWithIdentifier:@"EPDPOPControlVC"];
+    [self.navigationController pushViewController:_EPDPOPControlVC animated:YES];
 }
 
 - (IBAction)goBackAction:(UIButton *)sender {
@@ -63,6 +67,7 @@ static NSString *CellIdentifier = @"deviceCell";
     [super viewWillAppear:animated];
     [self clearTableViewAction];
 }
+
 
 - (void)RefreshDataAction:(NSNotification *)notification {
 //    NSLog(@"----:%@",notification.object);
@@ -99,10 +104,17 @@ static NSString *CellIdentifier = @"deviceCell";
     BLEDataModel *modelData = (BLEDataModel*)bleDic.allValues[indexPath.row];
     CBPeripheral *ble = (CBPeripheral *)(modelData.bleObject);
     if(ble.state == CBPeripheralStateDisconnected) {
-        [[BLEManager sharedManager] connectBLEDevice:ble];
-        UIViewController *_BLEDetailVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]  instantiateViewControllerWithIdentifier:@"BLEDetailVC"];
-        [self.navigationController pushViewController:_BLEDetailVC animated:YES];
         [[BLEManager sharedManager] stopScanAction];
+        [[BLEManager sharedManager] connectBLEDevice:ble];
+        if ([ble.name hasPrefix:@"EPDPOP"]) {
+            UIViewController *_EPDPOPControlVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]  instantiateViewControllerWithIdentifier:@"EPDPOPControlVC"];
+            [self.navigationController pushViewController:_EPDPOPControlVC animated:YES];
+        }else {
+            UIViewController *_BLEDetailVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]  instantiateViewControllerWithIdentifier:@"BLEDetailVC"];
+            [self.navigationController pushViewController:_BLEDetailVC animated:YES];
+        }
+        
+        
     }else if (ble.state == CBPeripheralStateConnecting){
         PopupView  *popUpView;
         popUpView = [[PopupView alloc]initWithFrame:CGRectMake(100, 240, 0, 0)];

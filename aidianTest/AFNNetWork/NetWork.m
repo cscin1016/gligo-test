@@ -42,9 +42,9 @@ static AFHTTPSessionManager *afnManager = nil;
  *  @param message 要提示的内容
  */
 + (void)showAlertViewWithMessage:(NSString *)message {
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alertView show];
+    NSLog(@"%@", message);
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+//    [alertView show];
 }
 //GET请求
 - (void)getDataWithUrl:(NSString *)url parameters:(NSDictionary *)paramters success:(Success)success failure:(Failure)failure {

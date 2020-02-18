@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *ButtonThree;
 @property (weak, nonatomic) IBOutlet UIButton *ButtonFour;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *EPDPOP100;
+@property (weak, nonatomic) IBOutlet UIButton *EPDPOP85;
 
 @end
 
@@ -36,7 +38,7 @@
 
 - (IBAction)selectWatchTypeAction:(UIButton *)sender {
     sender.selected = !sender.selected;
-    if (_ButtonOne.selected||_ButtonTwo.selected||_ButtonThree.selected||_ButtonFour.selected) {
+    if (_ButtonOne.selected||_ButtonTwo.selected||_ButtonThree.selected||_ButtonFour.selected||_EPDPOP85.selected||_EPDPOP100.selected) {
         _nextButton.enabled = YES;
     }else {
         _nextButton.enabled = NO;
@@ -58,6 +60,12 @@
     }
     if (_ButtonThree.selected) {
         [tempArray addObject:@"GLAGOM ONE"];
+    }
+    if (_EPDPOP85.selected) {
+        [tempArray addObject:@"EPDPOP"];
+    }
+    if (_EPDPOP100.selected) {
+        [tempArray addObject:@"EPDPOP"];
     }
     [BLEManager sharedManager].supportDeviceList = tempArray;
 }

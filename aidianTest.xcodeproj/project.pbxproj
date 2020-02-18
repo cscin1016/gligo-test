@@ -16,6 +16,8 @@
 		04288DD8233B006D00A16F7D /* UIButton+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DD3233B006D00A16F7D /* UIButton+Gradient.m */; };
 		04288DD9233B006D00A16F7D /* UIImageView+Gradien.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DD5233B006D00A16F7D /* UIImageView+Gradien.m */; };
 		04288DDA233B006D00A16F7D /* UIImage+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 04288DD6233B006D00A16F7D /* UIImage+Gradient.m */; };
+		0455440223F5032B00EFDD54 /* EPDPOPDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455440123F5032B00EFDD54 /* EPDPOPDetailVC.m */; };
+		0455440523F5038900EFDD54 /* EPDPOPControlVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0455440423F5038900EFDD54 /* EPDPOPControlVC.m */; };
 		047967C1233CFC09006D1EFF /* QueryTestRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 047967C0233CFC09006D1EFF /* QueryTestRecord.m */; };
 		047967C4233D0038006D1EFF /* RecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047967C3233D0038006D1EFF /* RecordCell.m */; };
 		04AE2D422282BEAA00B2AA37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D412282BEAA00B2AA37 /* AppDelegate.m */; };
@@ -29,6 +31,8 @@
 		04AE2D5E2282DE4B00B2AA37 /* PopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D5C2282DE4B00B2AA37 /* PopupView.m */; };
 		04AE2D612283118300B2AA37 /* BLEDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D602283118300B2AA37 /* BLEDetailVC.m */; };
 		04AE2D642283158800B2AA37 /* BLEDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04AE2D632283158800B2AA37 /* BLEDataModel.m */; };
+		04CAAD2C23FA6DCD0021FCF4 /* ScreenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAAD2B23FA6DCD0021FCF4 /* ScreenView.m */; };
+		04CAAD2F23FA83300021FCF4 /* TimeSelecter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CAAD2E23FA83300021FCF4 /* TimeSelecter.m */; };
 		04CC6ADD233A4B6F0073E915 /* NetWork.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC6AD9233A4B6F0073E915 /* NetWork.m */; };
 		04CC6ADE233A4B6F0073E915 /* EncryptUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 04CC6ADA233A4B6F0073E915 /* EncryptUtil.m */; };
 		411C6A3FBC0999638DB426A3 /* libPods-aidianTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AECBD1F832AA423A89C6D9E3 /* libPods-aidianTest.a */; };
@@ -54,6 +58,10 @@
 		04288DD4233B006D00A16F7D /* UIView+Gradien.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradien.h"; sourceTree = "<group>"; };
 		04288DD5233B006D00A16F7D /* UIImageView+Gradien.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Gradien.m"; sourceTree = "<group>"; };
 		04288DD6233B006D00A16F7D /* UIImage+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Gradient.m"; sourceTree = "<group>"; };
+		0455440023F5032B00EFDD54 /* EPDPOPDetailVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPDPOPDetailVC.h; sourceTree = "<group>"; };
+		0455440123F5032B00EFDD54 /* EPDPOPDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPDPOPDetailVC.m; sourceTree = "<group>"; };
+		0455440323F5038900EFDD54 /* EPDPOPControlVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPDPOPControlVC.h; sourceTree = "<group>"; };
+		0455440423F5038900EFDD54 /* EPDPOPControlVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPDPOPControlVC.m; sourceTree = "<group>"; };
 		047967BF233CFC09006D1EFF /* QueryTestRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueryTestRecord.h; sourceTree = "<group>"; };
 		047967C0233CFC09006D1EFF /* QueryTestRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueryTestRecord.m; sourceTree = "<group>"; };
 		047967C2233D0038006D1EFF /* RecordCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecordCell.h; sourceTree = "<group>"; };
@@ -78,6 +86,10 @@
 		04AE2D602283118300B2AA37 /* BLEDetailVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEDetailVC.m; sourceTree = "<group>"; };
 		04AE2D622283158800B2AA37 /* BLEDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEDataModel.h; sourceTree = "<group>"; };
 		04AE2D632283158800B2AA37 /* BLEDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLEDataModel.m; sourceTree = "<group>"; };
+		04CAAD2A23FA6DCD0021FCF4 /* ScreenView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScreenView.h; sourceTree = "<group>"; };
+		04CAAD2B23FA6DCD0021FCF4 /* ScreenView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScreenView.m; sourceTree = "<group>"; };
+		04CAAD2D23FA83300021FCF4 /* TimeSelecter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeSelecter.h; sourceTree = "<group>"; };
+		04CAAD2E23FA83300021FCF4 /* TimeSelecter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeSelecter.m; sourceTree = "<group>"; };
 		04CC6AD9233A4B6F0073E915 /* NetWork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWork.m; sourceTree = "<group>"; };
 		04CC6ADA233A4B6F0073E915 /* EncryptUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptUtil.m; sourceTree = "<group>"; };
 		04CC6ADB233A4B6F0073E915 /* NetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWork.h; sourceTree = "<group>"; };
@@ -151,29 +163,16 @@
 				04AE2D412282BEAA00B2AA37 /* AppDelegate.m */,
 				04AE2D432282BEAA00B2AA37 /* ViewController.h */,
 				04AE2D442282BEAA00B2AA37 /* ViewController.m */,
+				04CAAD2923FA6B150021FCF4 /* 蓝牙中心 */,
 				04288DCE233B006D00A16F7D /* Gradient */,
 				04288DC6233AFFE700A16F7D /* HHAlertView */,
 				04CC6AD8233A4B6F0073E915 /* AFNNetWork */,
-				040DA3CB23377349008BC297 /* QCNameVC.h */,
-				040DA3CC23377349008BC297 /* QCNameVC.m */,
-				040DA3CE23377371008BC297 /* SelectDeviceVC.h */,
-				040DA3CF23377371008BC297 /* SelectDeviceVC.m */,
-				040DA3D12337739A008BC297 /* ScanDeviceVC.h */,
-				040DA3D22337739A008BC297 /* ScanDeviceVC.m */,
-				04AE2D5F2283118300B2AA37 /* BLEDetailVC.h */,
-				04AE2D602283118300B2AA37 /* BLEDetailVC.m */,
-				047967BF233CFC09006D1EFF /* QueryTestRecord.h */,
-				047967C0233CFC09006D1EFF /* QueryTestRecord.m */,
-				047967C2233D0038006D1EFF /* RecordCell.h */,
-				047967C3233D0038006D1EFF /* RecordCell.m */,
-				04AE2D572282C30000B2AA37 /* BLEManager.h */,
-				04AE2D562282C30000B2AA37 /* BLEManager.m */,
-				04AE2D622283158800B2AA37 /* BLEDataModel.h */,
-				04AE2D632283158800B2AA37 /* BLEDataModel.m */,
-				04AE2D592282DDA100B2AA37 /* DeviceCell.h */,
-				04AE2D5A2282DDA100B2AA37 /* DeviceCell.m */,
-				04AE2D5D2282DE4B00B2AA37 /* PopupView.h */,
-				04AE2D5C2282DE4B00B2AA37 /* PopupView.m */,
+				04CAAD2423FA6A460021FCF4 /* 测试人员名称 */,
+				04CAAD2523FA6A710021FCF4 /* 筛选过滤设备 */,
+				04CAAD2623FA6A8E0021FCF4 /* 扫描设备 */,
+				04CAAD2323FA687C0021FCF4 /* EPDPOP */,
+				04CAAD2823FA6ADC0021FCF4 /* 手表设备检测过程 */,
+				04CAAD2723FA6AAC0021FCF4 /* 测试记录 */,
 				04AE2D462282BEAA00B2AA37 /* Main.storyboard */,
 				04AE2D492282BEAB00B2AA37 /* Assets.xcassets */,
 				04AE2D4B2282BEAB00B2AA37 /* LaunchScreen.storyboard */,
@@ -181,6 +180,83 @@
 				04AE2D4F2282BEAB00B2AA37 /* main.m */,
 			);
 			path = aidianTest;
+			sourceTree = "<group>";
+		};
+		04CAAD2323FA687C0021FCF4 /* EPDPOP */ = {
+			isa = PBXGroup;
+			children = (
+				0455440023F5032B00EFDD54 /* EPDPOPDetailVC.h */,
+				0455440123F5032B00EFDD54 /* EPDPOPDetailVC.m */,
+				0455440323F5038900EFDD54 /* EPDPOPControlVC.h */,
+				0455440423F5038900EFDD54 /* EPDPOPControlVC.m */,
+				04CAAD2D23FA83300021FCF4 /* TimeSelecter.h */,
+				04CAAD2E23FA83300021FCF4 /* TimeSelecter.m */,
+				04CAAD2A23FA6DCD0021FCF4 /* ScreenView.h */,
+				04CAAD2B23FA6DCD0021FCF4 /* ScreenView.m */,
+			);
+			path = EPDPOP;
+			sourceTree = "<group>";
+		};
+		04CAAD2423FA6A460021FCF4 /* 测试人员名称 */ = {
+			isa = PBXGroup;
+			children = (
+				040DA3CB23377349008BC297 /* QCNameVC.h */,
+				040DA3CC23377349008BC297 /* QCNameVC.m */,
+			);
+			path = "测试人员名称";
+			sourceTree = "<group>";
+		};
+		04CAAD2523FA6A710021FCF4 /* 筛选过滤设备 */ = {
+			isa = PBXGroup;
+			children = (
+				040DA3CE23377371008BC297 /* SelectDeviceVC.h */,
+				040DA3CF23377371008BC297 /* SelectDeviceVC.m */,
+			);
+			path = "筛选过滤设备";
+			sourceTree = "<group>";
+		};
+		04CAAD2623FA6A8E0021FCF4 /* 扫描设备 */ = {
+			isa = PBXGroup;
+			children = (
+				040DA3D12337739A008BC297 /* ScanDeviceVC.h */,
+				040DA3D22337739A008BC297 /* ScanDeviceVC.m */,
+				04AE2D592282DDA100B2AA37 /* DeviceCell.h */,
+				04AE2D5A2282DDA100B2AA37 /* DeviceCell.m */,
+			);
+			path = "扫描设备";
+			sourceTree = "<group>";
+		};
+		04CAAD2723FA6AAC0021FCF4 /* 测试记录 */ = {
+			isa = PBXGroup;
+			children = (
+				047967BF233CFC09006D1EFF /* QueryTestRecord.h */,
+				047967C0233CFC09006D1EFF /* QueryTestRecord.m */,
+				047967C2233D0038006D1EFF /* RecordCell.h */,
+				047967C3233D0038006D1EFF /* RecordCell.m */,
+			);
+			path = "测试记录";
+			sourceTree = "<group>";
+		};
+		04CAAD2823FA6ADC0021FCF4 /* 手表设备检测过程 */ = {
+			isa = PBXGroup;
+			children = (
+				04AE2D5F2283118300B2AA37 /* BLEDetailVC.h */,
+				04AE2D602283118300B2AA37 /* BLEDetailVC.m */,
+			);
+			path = "手表设备检测过程";
+			sourceTree = "<group>";
+		};
+		04CAAD2923FA6B150021FCF4 /* 蓝牙中心 */ = {
+			isa = PBXGroup;
+			children = (
+				04AE2D572282C30000B2AA37 /* BLEManager.h */,
+				04AE2D562282C30000B2AA37 /* BLEManager.m */,
+				04AE2D622283158800B2AA37 /* BLEDataModel.h */,
+				04AE2D632283158800B2AA37 /* BLEDataModel.m */,
+				04AE2D5D2282DE4B00B2AA37 /* PopupView.h */,
+				04AE2D5C2282DE4B00B2AA37 /* PopupView.m */,
+			);
+			path = "蓝牙中心";
 			sourceTree = "<group>";
 		};
 		04CC6AD8233A4B6F0073E915 /* AFNNetWork */ = {
@@ -309,9 +385,11 @@
 			files = (
 				040DA3D023377371008BC297 /* SelectDeviceVC.m in Sources */,
 				04AE2D452282BEAA00B2AA37 /* ViewController.m in Sources */,
+				04CAAD2C23FA6DCD0021FCF4 /* ScreenView.m in Sources */,
 				04AE2D582282C30100B2AA37 /* BLEManager.m in Sources */,
 				04AE2D612283118300B2AA37 /* BLEDetailVC.m in Sources */,
 				04288DDA233B006D00A16F7D /* UIImage+Gradient.m in Sources */,
+				0455440223F5032B00EFDD54 /* EPDPOPDetailVC.m in Sources */,
 				04AE2D502282BEAB00B2AA37 /* main.m in Sources */,
 				04AE2D5E2282DE4B00B2AA37 /* PopupView.m in Sources */,
 				04288DD8233B006D00A16F7D /* UIButton+Gradient.m in Sources */,
@@ -319,10 +397,12 @@
 				04AE2D422282BEAA00B2AA37 /* AppDelegate.m in Sources */,
 				047967C1233CFC09006D1EFF /* QueryTestRecord.m in Sources */,
 				040DA3CD23377349008BC297 /* QCNameVC.m in Sources */,
+				04CAAD2F23FA83300021FCF4 /* TimeSelecter.m in Sources */,
 				04CC6ADE233A4B6F0073E915 /* EncryptUtil.m in Sources */,
 				04288DD7233B006D00A16F7D /* UIView+Gradien.m in Sources */,
 				04288DCD233AFFE700A16F7D /* UIView+Draw.m in Sources */,
 				040DA3D32337739A008BC297 /* ScanDeviceVC.m in Sources */,
+				0455440523F5038900EFDD54 /* EPDPOPControlVC.m in Sources */,
 				04AE2D5B2282DDA100B2AA37 /* DeviceCell.m in Sources */,
 				04CC6ADD233A4B6F0073E915 /* NetWork.m in Sources */,
 				04AE2D642283158800B2AA37 /* BLEDataModel.m in Sources */,

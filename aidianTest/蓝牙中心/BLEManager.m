@@ -10,8 +10,12 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import "BLEDataModel.h"
 
+#define TRANSFER_CHARACTERISTIC_UUID_FF11    @"FF11"
+#define TRANSFER_CHARACTERISTIC_UUID_FF12    @"FF12"
+
 #define TRANSFER_CHARACTERISTIC_UUID_FF21    @"FF21"
 #define TRANSFER_CHARACTERISTIC_UUID_FF22    @"FF22"
+
 
 static BLEManager *manager = nil;
 
@@ -150,7 +154,6 @@ static BLEManager *manager = nil;
     }
 //    NSLog(@"-----%@",[peripheral.identifier UUIDString]);
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshBLEData" object:_myTempDataDic];
-    
 }
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral{
@@ -159,8 +162,6 @@ static BLEManager *manager = nil;
     [peripheral discoverServices:nil];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RefreshBLEData" object:_myTempDataDic];
-    
-    
 }
 
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
@@ -344,6 +345,57 @@ static BLEManager *manager = nil;
             [self sendDatawithperipheral:tempPeripheral characteristic:TRANSFER_CHARACTERISTIC_UUID_FF21 data:sendData ];
         }else{
             //            NSLog(@"未连接");
+        }
+    }
+}
+
+#pragma mark - EPDPOP
+//价格命令
+- (void)setPriceCommand:(char)numberA dot:(char)dot usa:(char)usa forS:(char)fors priceNumber:(double)price
+{
+    NSLog(@"====== %f",price);
+    char strcommand[12] = {0x55, 0x00, 0x01, 0};
+    strcommand[3] = 0;//0表示白底，1表示黑底
+    strcommand[4] = usa;//美元符：1表示显示
+    strcommand[5] = fors;//For:1表示显示
+    strcommand[6] = dot;//小数点：1表示显示
+    strcommand[7] = numberA;//A_Value:0-9具体数值，0xFF表示不显示
+    if (price<100) {
+        strcommand[8] = (int)price/10==0?0xff:(int)price/10;//B_Value:0-9具体数值，0xFF表示不显示
+        strcommand[9] = ((int)price)%10;//C_Value:0-9具体数值，0xFF表示不显示
+        strcommand[10] = ((int)(price*10))%10;//D_Value:0-9具体数值，0xFF表示不显示
+        strcommand[11] = ((int)(price*100))%10;//E_Value:0-9具体数值，0xFF表示不显示
+    }else if (price < 1000){
+        strcommand[8] = 0xff;//B_Value:0-9具体数值，0xFF表示不显示
+        strcommand[9] = ((int)price)/100;//C_Value:0-9具体数值，0xFF表示不显示
+        strcommand[10] = ((int)price)/10%10;//D_Value:0-9具体数值，0xFF表示不显示
+        strcommand[11] = ((int)price)%10;//E_Value:0-9具体数值，0xFF表示不显示
+    }else {
+        strcommand[8] = ((int)price)/1000;//B_Value:0-9具体数值，0xFF表示不显示
+        strcommand[9] = ((int)price)/100%10;//C_Value:0-9具体数值，0xFF表示不显示
+        strcommand[10] = ((int)price)/10%10;//D_Value:0-9具体数值，0xFF表示不显示
+        strcommand[11] = ((int)price)%10;//E_Value:0-9具体数值，0xFF表示不显示
+    }
+    
+    NSData *cmdData = [NSData dataWithBytes:strcommand length:12];
+    NSLog(@"%@", cmdData);
+    for(int i = 0; i < _myTempDataDic.allValues.count; i++){
+        CBPeripheral *tempPeripheral = (CBPeripheral *)(((BLEDataModel*)_myTempDataDic.allValues[i]).bleObject);
+        if (tempPeripheral.state == 2){
+            [self sendDatawithperipheral:tempPeripheral characteristic:TRANSFER_CHARACTERISTIC_UUID_FF11 data:cmdData];
+        }
+    }
+}
+
+- (void)setShowModelAction:(char) model {
+    char strcommand[4] = {0x55, 0x00, 0x02, 0};
+    strcommand[3] = model;//0表示价格牌模式，1表示预设模式一，2表示预设模式二
+    NSData *cmdData = [NSData dataWithBytes:strcommand length:4];
+    NSLog(@"%@", cmdData);
+    for(int i = 0; i < _myTempDataDic.allValues.count; i++){
+        CBPeripheral *tempPeripheral = (CBPeripheral *)(((BLEDataModel*)_myTempDataDic.allValues[i]).bleObject);
+        if (tempPeripheral.state == 2){
+            [self sendDatawithperipheral:tempPeripheral characteristic:TRANSFER_CHARACTERISTIC_UUID_FF11 data:cmdData];
         }
     }
 }
