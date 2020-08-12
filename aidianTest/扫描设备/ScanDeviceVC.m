@@ -45,8 +45,8 @@ static NSString *CellIdentifier = @"deviceCell";
     _rssiLabel.text = [NSString stringWithFormat:@"信号：%d",(int)rssiFlag];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(RefreshDataAction:) name:@"RefreshBLEData" object:nil];
     
-    UIViewController *_EPDPOPControlVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]  instantiateViewControllerWithIdentifier:@"EPDPOPControlVC"];
-    [self.navigationController pushViewController:_EPDPOPControlVC animated:YES];
+//    UIViewController *_EPDPOPControlVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil]  instantiateViewControllerWithIdentifier:@"EPDPOPControlVC"];
+//    [self.navigationController pushViewController:_EPDPOPControlVC animated:YES];
 }
 
 - (IBAction)goBackAction:(UIButton *)sender {
